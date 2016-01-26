@@ -1,0 +1,60 @@
+<ion-navbar *navbar>
+    <button menuToggle *ngIf="!property">
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Property Details</ion-title>
+</ion-navbar>
+
+<ion-content class="property-details">
+    <div *ngIf="property" class="selection">
+        <ion-card>
+            <img src="{{property.pic}}"/>
+            <ion-card-content>
+                <h2 class="card-title">
+                    {{property.title}}
+                </h2>
+                <p>
+                    {{property.description}}
+                </p>
+            </ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-icon item-left name="moon"></ion-icon>
+                    <h3>Bedrooms</h3>
+                    <ion-note item-right>{{property.beds}}</ion-note>
+                </ion-item>
+                <ion-item>
+                    <ion-icon item-left name="umbrella"></ion-icon>
+                    <h3>Bathrooms</h3>
+                    <ion-note item-right>{{property.baths}}</ion-note>
+                </ion-item>
+                <ion-item>
+                    <ion-icon item-left name="pricetag"></ion-icon>
+                    <h3>Asking Price</h3>
+                    <ion-note item-right>{{property.price}}</ion-note>
+                </ion-item>
+                <button ion-item (click)="showBroker($event, property.broker)">
+                    <ion-avatar item-left>
+                        <img src="{{property.broker.picture}}"/>
+                    </ion-avatar>
+                    <h2>{{property.broker.name}}</h2>
+                    <p>{{property.broker.title}}</p>
+                </button>
+            </ion-list>
+            <ion-item>
+                <button clear danger (click)="favorite($event, property)" class="btn-left">
+                    <ion-icon name="star"></ion-icon>
+                    <div>Favorite</div>
+                </button>
+                <button clear danger (click)="like($event, property)" class="btn-center">
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div>{{property.likes}} Likes</div>
+                </button>
+                <button clear danger (click)="share($event, property)" class="btn-right">
+                    <ion-icon name="share-alt"></ion-icon>
+                    <div>Share</div>
+                </button>
+            </ion-item>
+        </ion-card>
+    </div>
+</ion-content>

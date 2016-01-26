@@ -1,0 +1,24 @@
+.property-details div.selection {
+  font-size: 22px;
+  display: block;
+  text-align: left;
+  padding-top: .5rem;
+}
+
+.property-details .btn-left {
+  width: 33%;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+
+.property-details .btn-center {
+  width: 34%;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+.property-details .btn-right {
+  width: 33%;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}

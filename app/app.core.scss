@@ -1,0 +1,16 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+
+@import "pages/property-details/property-details";
+
+@import "pages/broker-details/broker-details";
+
+ion-note {
+  font-size: 14px;
+}

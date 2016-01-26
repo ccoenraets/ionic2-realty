@@ -1,0 +1,23 @@
+<ion-navbar *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Favorites</ion-title>
+</ion-navbar>
+
+<ion-content>
+    <ion-list>
+        <ion-item-sliding *ngFor="#property of properties">
+            <button ion-item (click)="itemTapped($event, property)">
+                <ion-thumbnail item-left>
+                    <img src="{{property.thumb}}"/>
+                </ion-thumbnail>
+                <h2>{{property.title}}</h2>
+                <p>{{property.city}}, {{property.state}} ∙ {{property.price}}</p>
+            </button>
+            <ion-item-options>
+                <button danger (click)="deleteItem($event, property)">Delete</button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
