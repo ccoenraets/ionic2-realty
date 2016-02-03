@@ -1,19 +1,23 @@
+import {OnInit} from 'angular2/core';
 import {Page, NavController, NavParams} from 'ionic/ionic';
 import {PropertyDetailsPage} from '../property-details/property-details';
-import * as propertyService from '../../services/property-service';
+import {PropertyService} from '../../services/property-service';
 
 @Page({
     templateUrl: 'build/pages/property-list/property-list.html'
 })
 export class PropertyListPage {
 
-    constructor(nav:NavController, navParams:NavParams) {
+    constructor(nav:NavController, navParams:NavParams, propertyService:PropertyService) {
         this.nav = nav;
-
-        // If we navigated to this page, we will have an item available as a nav param
+        this.propertyService = propertyService;
         this.selectedItem = navParams.get('item');
+    }
 
-        propertyService.findAll().then(data => this.properties = data);
+    ngOnInit() {
+        this.propertyService.findAll().subscribe(
+            data => this.properties = data
+        );
     }
 
     itemTapped(event, property) {

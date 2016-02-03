@@ -42,19 +42,20 @@
                 </button>
             </ion-list>
             <ion-item>
-                <button clear danger (click)="favorite($event, property)" class="btn-left">
+                <button clear item-left danger (click)="favorite($event, property)">
                     <ion-icon name="star"></ion-icon>
                     <div>Favorite</div>
                 </button>
-                <button clear danger (click)="like($event, property)" class="btn-center">
+                <button clear danger (click)="like($event, property)">
                     <ion-icon name="thumbs-up"></ion-icon>
                     <div>{{property.likes}} Likes</div>
                 </button>
-                <button clear danger (click)="share($event, property)" class="btn-right">
+                <button clear item-right danger (click)="share($event, property)">
                     <ion-icon name="share-alt"></ion-icon>
                     <div>Share</div>
                 </button>
             </ion-item>
+
         </ion-card>
     </div>
 </ion-content>

@@ -7,7 +7,7 @@
     
 1. Create a project:
     ```
-    ionic start IonicRealty --v2
+    ionic start IonicRealty sidemenu --v2
     ```
 
 1. Replace the project’s app folder with the app folder in this repository
@@ -22,4 +22,4 @@
     ionic serve
     ```
     
-From here, you can build and deploy the app on different platforms using the traditional Ionic commands (`ionic build ios`, etc.)    
+From here, you can build and deploy the app on different platforms using the traditional Ionic commands (`ionic build ios`, etc.)

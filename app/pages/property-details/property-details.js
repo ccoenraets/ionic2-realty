@@ -1,37 +1,40 @@
 import {Page, NavController, NavParams, Alert, ActionSheet} from 'ionic/ionic';
 import {BrokerDetailsPage} from '../broker-details/broker-details';
-import * as propertyService from '../../services/property-service';
-import * as favoriteService from '../../services/favorite-service';
+import {PropertyService} from '../../services/property-service';
 
 @Page({
     templateUrl: 'build/pages/property-details/property-details.html'
 })
 export class PropertyDetailsPage {
 
-    constructor(nav:NavController, navParams:NavParams) {
+    constructor(nav:NavController, navParams:NavParams, propertyService:PropertyService) {
         this.nav = nav;
-        // If we navigated to this page, we will have an property available as a nav param
+        this.propertyService = propertyService;
         this.property = navParams.get('property');
     }
 
     favorite(event, property) {
 
-        favoriteService.add(property).then(property => {
-            let alert = Alert.create({
-                title: 'Favorites',
-                subTitle: 'Property added to your favorites',
-                buttons: ['OK']
-            });
-            this.nav.present(alert);
-        });
+        this.propertyService.favorite(property).subscribe(
+            property => {
+                let alert = Alert.create({
+                    title: 'Favorites',
+                    subTitle: 'Property added to your favorites',
+                    buttons: ['OK']
+                });
+                this.nav.present(alert);
+            }
+        );
 
     }
 
     like(event, property) {
 
-        propertyService.like(property.id).then(likes => {
-            property.likes = likes;
-        });
+        this.propertyService.like(property).subscribe(
+            likes => {
+                property.likes = likes;
+            }
+        );
 
     }
 
@@ -41,25 +44,25 @@ export class PropertyDetailsPage {
                 {
                     text: 'Text',
                     handler: () => {
-                        console.log('Destructive clicked');
+                        console.log('Text clicked');
                     }
                 },
                 {
                     text: 'Email',
                     handler: () => {
-                        console.log('Archive clicked');
+                        console.log('Email clicked');
                     }
                 },
                 {
                     text: 'Facebook',
                     handler: () => {
-                        console.log('Archive clicked');
+                        console.log('Facebook clicked');
                     }
                 },
                 {
                     text: 'Twitter',
                     handler: () => {
-                        console.log('Archive clicked');
+                        console.log('Twitter clicked');
                     }
                 },
                 {
