@@ -26,3 +26,7 @@
     ```
     
 From here, you can build and deploy the app on different platforms using the traditional Ionic commands (`ionic build ios`, etc.)
+
+More information is available in these blog posts:
+- [IonicRealty: New Ionic 2 Sample Application](http://coenraets.org/blog/2016/01/ionicrealty-new-ionic-2-sample-application/)
+- [Angular 2 and Ionic 2 Data Services - Part 1: Promises and Observables](http://coenraets.org/blog/2016/02/angular2-ionic2-data-services-promises-observables/)
