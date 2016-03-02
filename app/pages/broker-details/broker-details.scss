@@ -1,32 +1,39 @@
-.broker-details div.selection {
-  font-size: 22px;
-  display: block;
-  text-align: center;
-  padding-top: .5rem;
-}
+.broker {
 
-.ios .broker-details ion-card ion-avatar img {
-  max-width: 14rem;
-  max-height: 14rem;
-  border-radius: 50%;
-}
+  ion-card {
 
-.broker-details ion-avatar img {
-  display: inline;
-}
+    margin-top: 100px;
+    overflow: visible;
 
-.broker-details ion-card > ion-item {
-  background-color: #387ef5;
+    ion-card-content {
 
-}
+      background-color: map-get($colors, primary);
+      color: #FFFFFF;
+      text-align: center;
+      padding-bottom: 28px;
 
-.broker-details ion-card > ion-item h2 {
-  font-size: 2.5rem;
-  margin-top: .5rem;
-  color: white;
-}
+      img {
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        margin-top: -100px;
+        border: solid 4px #FFFFFF;
+        display: inline;
+      }
 
-.broker-details ion-card > ion-item h3 {
-  font-size: 1.8rem;
-  color: white;
+      h2 {
+        font-size: 2.5rem;
+        margin-top: .5rem;
+        color: white;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        color: white;
+      }
+
+    }
+
+  }
+
 }

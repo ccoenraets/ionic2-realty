@@ -1,11 +1,11 @@
 <ion-navbar *navbar>
-    <button menuToggle *ngIf="!property">
+    <button menuToggle>
         <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Property Details</ion-title>
+    <ion-title>Property</ion-title>
 </ion-navbar>
 
-<ion-content class="property-details">
+<ion-content class="property">
     <div *ngIf="property" class="selection">
         <ion-card>
             <img src="{{property.pic}}"/>
@@ -24,7 +24,7 @@
                     <ion-note item-right>{{property.beds}}</ion-note>
                 </ion-item>
                 <ion-item>
-                    <ion-icon item-left name="umbrella"></ion-icon>
+                    <ion-icon item-left name="flask"></ion-icon>
                     <h3>Bathrooms</h3>
                     <ion-note item-right>{{property.baths}}</ion-note>
                 </ion-item>
@@ -41,21 +41,26 @@
                     <p>{{property.broker.title}}</p>
                 </button>
             </ion-list>
-            <ion-item>
-                <button clear item-left danger (click)="favorite($event, property)">
-                    <ion-icon name="star"></ion-icon>
-                    <div>Favorite</div>
-                </button>
-                <button clear danger (click)="like($event, property)">
-                    <ion-icon name="thumbs-up"></ion-icon>
-                    <div>{{property.likes}} Likes</div>
-                </button>
-                <button clear item-right danger (click)="share($event, property)">
-                    <ion-icon name="share-alt"></ion-icon>
-                    <div>Share</div>
-                </button>
-            </ion-item>
-
+            <ion-row no-padding>
+                <ion-col>
+                    <button clear small (click)="favorite($event, property)">
+                        <ion-icon name="star"></ion-icon>
+                        Favorite
+                    </button>
+                </ion-col>
+                <ion-col text-center>
+                    <button clear small (click)="like($event, property)">
+                        <ion-icon name="thumbs-up"></ion-icon>
+                        Like
+                    </button>
+                </ion-col>
+                <ion-col text-right>
+                    <button clear small (click)="share($event, property)">
+                        <ion-icon name="share-alt"></ion-icon>
+                        Share
+                    </button>
+                </ion-col>
+            </ion-row>
         </ion-card>
     </div>
 </ion-content>

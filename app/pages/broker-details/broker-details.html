@@ -1,25 +1,21 @@
 <ion-navbar *navbar>
-    <button menuToggle *ngIf="!broker">
+    <button menuToggle>
         <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Broker Details</ion-title>
+    <ion-title>Broker</ion-title>
 </ion-navbar>
 
-<ion-content class="broker-details">
+<ion-content class="broker">
     <div *ngIf="broker" class="selection">
         <ion-card>
-            <ion-item>
-                <ion-item-content class="header" style="text-align: center">
-                    <ion-avatar>
-                        <img src="{{broker.picture}}"/>
-                    </ion-avatar>
-                    <h2>{{broker.firstName}} {{broker.lastName}}</h2>
-                    <h3>{{broker.title}}</h3>
-                </ion-item-content>
-            </ion-item>
+            <ion-card-content>
+                <img src="{{broker.picture}}"/>
+                <h2>{{broker.firstName}} {{broker.lastName}}</h2>
+                <h3>{{broker.title}}</h3>
+            </ion-card-content>
 
             <ion-list>
-                <a href="tel:{{broker.phone}}" ion-item>
+                <a href="tel:{{broker.Phone__c}}" ion-item>
                     <ion-icon name="call" item-left></ion-icon>
                     <p>Call Office</p>
                     <h2>{{broker.phone}}</h2>

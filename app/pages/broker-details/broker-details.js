@@ -1,5 +1,5 @@
 import {OnInit} from 'angular2/core';
-import {Page, NavController, NavParams} from 'ionic/ionic';
+import {Page, NavController, NavParams} from 'ionic-framework/ionic';
 import {BrokerService} from '../../services/broker-service';
 
 @Page({
@@ -7,7 +7,11 @@ import {BrokerService} from '../../services/broker-service';
 })
 export class BrokerDetailsPage {
 
-    constructor(nav:NavController, navParams:NavParams, brokerService:BrokerService) {
+    static get parameters() {
+        return [[NavController], [NavParams], [BrokerService]];
+    }
+
+    constructor(nav, navParams, brokerService) {
         this.brokerService = brokerService;
         this.broker = navParams.get('broker');
     }
