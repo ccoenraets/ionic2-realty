@@ -37,4 +37,4 @@ Additional Resources:
 
 - A version of the same application with a Node.js-powered REST backend is also available. Read this blog post for  details: [Angular 2 and Ionic 2 Data Services - Part 2: Using REST Services](http://coenraets.org/blog/2016/02/angular2-ionic2-rest-services/)  
 
-- A version of the same application with a Salesforce backend is also available. Read this blog post for details:[Building Customer-Facing Mobile Apps with Angular 2, Ionic 2, and Salesforce](http://coenraets.org/blog/2016/02/angular2-ionic2-salesforce/)  
+- A version of the same application with a Salesforce backend is also available. Read this blog post for details: [Building Customer-Facing Mobile Apps with Angular 2, Ionic 2, and Salesforce](http://coenraets.org/blog/2016/02/angular2-ionic2-salesforce/)  
