@@ -1,5 +1,5 @@
 import {OnInit} from 'angular2/core';
-import {Page, NavController, NavParams} from 'ionic-framework/ionic';
+import {Page, NavController, NavParams} from 'ionic-angular';
 import {PropertyDetailsPage} from '../property-details/property-details';
 import {PropertyService} from '../../services/property-service';
 

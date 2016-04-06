@@ -18,12 +18,18 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <preference name="webviewbounce" value="false" />
-    <preference name="UIWebViewBounce" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="16" />
-    <preference name="BackupWebStorage" value="none" />
-    <feature name="StatusBar">
-        <param name="ios-package" onload="true" value="CDVStatusBar" />
-    </feature>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="android-minSdkVersion" value="16"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <feature name="StatusBar">
+    <param name="ios-package" onload="true" value="CDVStatusBar"/>
+  </feature>
+  <plugin name="cordova-plugin-device" spec="~1.1.1"/>
+  <plugin name="cordova-plugin-console" spec="~1.0.2"/>
+  <plugin name="cordova-plugin-whitelist" spec="~1.2.1"/>
+  <plugin name="cordova-plugin-splashscreen" spec="~3.2.1"/>
+  <plugin name="cordova-plugin-statusbar" spec="~2.1.2"/>
+  <plugin name="ionic-plugin-keyboard" spec="~2.0.1"/>
 </widget>

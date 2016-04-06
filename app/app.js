@@ -1,4 +1,7 @@
-import {App, IonicApp, Platform} from 'ionic-framework/ionic';
+import 'zone.js';
+import 'reflect-metadata';
+import 'es6-shim';
+import {App, IonicApp, Platform} from 'ionic-angular';
 import {WelcomePage} from './pages/welcome/welcome';
 import {PropertyListPage} from './pages/property-list/property-list';
 import {BrokerListPage} from './pages/broker-list/broker-list';

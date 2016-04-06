@@ -1,4 +1,4 @@
-import {Page, NavController, NavParams, Alert, ActionSheet} from 'ionic-framework/ionic';
+import {Page, NavController, NavParams, Alert, ActionSheet} from 'ionic-angular';
 import {BrokerDetailsPage} from '../broker-details/broker-details';
 import {PropertyService} from '../../services/property-service';
 
