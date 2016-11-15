@@ -2,9 +2,9 @@
 
 Watch the video [here](https://youtu.be/oKHrh_PMHns).
 
-1. Install the the latest beta version of the Ionic CLI:
+1. Install the the latest version of the Ionic CLI:
     ```
-    npm install -g ionic@beta
+    npm install -g ionic
     ```
 
 1. Clone this repository

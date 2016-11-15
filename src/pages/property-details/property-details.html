@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Property</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="property" class="selection">
+    <ion-card>
+      <img src="{{property.pic}}" />
+      <ion-card-content>
+        <h2 class="card-title">
+          {{property.title}}
+        </h2>
+        <p>
+          {{property.description}}
+        </p>
+      </ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon item-left name="moon"></ion-icon>
+          <h3>Bedrooms</h3>
+          <ion-note item-right>{{property.beds}}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-icon item-left name="flask"></ion-icon>
+          <h3>Bathrooms</h3>
+          <ion-note item-right>{{property.baths}}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-icon item-left name="pricetag"></ion-icon>
+          <h3>Asking Price</h3>
+          <ion-note item-right>{{property.price}}</ion-note>
+        </ion-item>
+        <button ion-item (click)="showBroker($event, property.broker)">
+            <ion-avatar item-left>
+                <img src="{{property.broker.picture}}"/>
+            </ion-avatar>
+            <h2>{{property.broker.name}}</h2>
+            <p>{{property.broker.title}}</p>
+        </button>
+      </ion-list>
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small (click)="favorite($event, property)">
+             <ion-icon name="star"></ion-icon>Favorite
+          </button>
+        </ion-col>
+        <ion-col text-center>
+          <button ion-button clear small (click)="like($event, property)">
+             <ion-icon name="thumbs-up"></ion-icon>&nbsp;{{property.likes}} Like<span *ngIf="property.likes > 1">s</span>
+          </button>
+        </ion-col>
+        <ion-col text-right>
+          <button ion-button clear small (click)="share($event, property)">
+              <ion-icon name="share-alt"></ion-icon>Share
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+</ion-content>
